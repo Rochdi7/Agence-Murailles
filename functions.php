@@ -35,3 +35,9 @@ require_once AM_THEME_DIR . '/inc/ajax-handlers.php';
 
 // Template Tags (reusable display helpers)
 require_once AM_THEME_DIR . '/inc/template-tags.php';
+
+// Annonce Immobilier (CPT, taxonomies, meta, AJAX, helpers)
+require_once AM_THEME_DIR . '/inc/cpt-annonce.php';
+
+// Blog Functions (reading time, related posts, breadcrumbs, share)
+require_once AM_THEME_DIR . '/inc/blog-functions.php';

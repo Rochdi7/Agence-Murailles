@@ -8,6 +8,15 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .footer-top-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .posts-grid-related {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .agents-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -174,6 +183,19 @@
 
     .blog-main .posts-grid {
         grid-template-columns: 1fr;
+    }
+
+    .posts-grid-related {
+        grid-template-columns: 1fr;
+    }
+
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-share {
+        justify-content: center;
     }
 
     /* Single Property */

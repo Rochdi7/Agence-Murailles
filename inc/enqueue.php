@@ -63,7 +63,13 @@ function am_enqueue_assets() {
         true
     );
 
-    // Property filter JS (only on property archives and front page)
+    // Localize AJAX data (shared by property filter, annonce filter, and contact forms)
+    $ajax_data = array(
+        'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+        'nonce'   => wp_create_nonce( 'am_filter_nonce' ),
+    );
+
+    // Property filter JS (property archives and front page)
     if ( is_post_type_archive( 'property' ) || is_front_page() || is_tax( 'property_city' ) || is_tax( 'property_type' ) || is_tax( 'property_status' ) ) {
         wp_enqueue_script(
             'am-property-filter',
@@ -73,10 +79,25 @@ function am_enqueue_assets() {
             true
         );
 
-        wp_localize_script( 'am-property-filter', 'amAjax', array(
-            'ajaxUrl' => admin_url( 'admin-ajax.php' ),
-            'nonce'   => wp_create_nonce( 'am_filter_nonce' ),
-        ) );
+        wp_localize_script( 'am-property-filter', 'amAjax', $ajax_data );
+    }
+
+    // Annonce filter JS (annonce archives and taxonomy pages)
+    if ( is_post_type_archive( 'annonce' ) || is_tax( 'annonce_transaction' ) || is_tax( 'annonce_categorie' ) || is_tax( 'annonce_ville' ) ) {
+        wp_enqueue_script(
+            'am-annonce-filter',
+            AM_THEME_URI . '/assets/js/annonce-filter.js',
+            array(),
+            AM_THEME_VERSION,
+            true
+        );
+
+        wp_localize_script( 'am-annonce-filter', 'amAjax', $ajax_data );
+    }
+
+    // Localize for contact forms on single pages
+    if ( is_singular( 'property' ) || is_singular( 'annonce' ) || is_page_template( 'page-contact.php' ) ) {
+        wp_localize_script( 'am-main', 'amAjax', $ajax_data );
     }
 }
 add_action( 'wp_enqueue_scripts', 'am_enqueue_assets' );

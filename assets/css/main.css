@@ -1893,10 +1893,295 @@ p {
     opacity: 0.9;
 }
 
+/* ── Annonce Immobilier ─────────────────────────────────────── */
+.annonce-badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.badge-vente { background-color: var(--color-success); }
+.badge-location { background-color: #0d6efd; }
+.badge-vacances { background-color: #6f42c1; }
+.badge-disponible { background-color: var(--color-success); }
+
+.annonce-ref {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-gray-400);
+    margin-bottom: var(--space-sm);
+}
+
+.annonce-ref-detail {
+    display: inline-block;
+    font-size: 0.8125rem;
+    color: var(--color-gray-500);
+    margin-top: var(--space-xs);
+}
+
+.annonce-publish-date {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--color-gray-500);
+    margin-top: var(--space-xs);
+}
+
+.annonce-card .property-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.annonce-date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--color-gray-400);
+}
+
+.annonce-action-btn {
+    margin-bottom: var(--space-sm);
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: var(--color-white);
+    border-color: #25d366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da851;
+    border-color: #1da851;
+    color: var(--color-white);
+}
+
+.annonce-contact-card .btn + .btn {
+    margin-top: 0;
+}
+
+/* ── Breadcrumb ────────────────────────────────────────────── */
+.breadcrumb {
+    font-size: 0.8125rem;
+    margin-bottom: var(--space-md);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb a:hover {
+    color: var(--color-accent-light);
+}
+
+.breadcrumb-sep {
+    margin: 0 var(--space-xs);
+    opacity: 0.5;
+}
+
+.breadcrumb-current {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── Blog Extras ───────────────────────────────────────────── */
+.author-box {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    background-color: var(--color-off-white);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-2xl);
+}
+
+.author-avatar img {
+    border-radius: var(--radius-full);
+}
+
+.author-name a {
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+}
+
+.author-name a:hover {
+    color: var(--color-accent);
+}
+
+.author-bio {
+    font-size: 0.9375rem;
+    color: var(--color-gray-500);
+    margin-bottom: 0;
+}
+
+.related-posts {
+    margin-top: var(--space-3xl);
+}
+
+.related-posts h3 {
+    margin-bottom: var(--space-xl);
+}
+
+.posts-grid-related {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blog-share {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-gray-100);
+}
+
+.share-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+}
+
+.share-twitter { background-color: #1da1f2; }
+.share-linkedin { background-color: #0a66c2; }
+
 /* ── Footer ────────────────────────────────────────────────── */
 .site-footer {
     background-color: var(--color-dark);
     color: rgba(255, 255, 255, 0.75);
+}
+
+/* Footer Top Section (Annonces + Blog) */
+.footer-top-section {
+    background-color: #1a1e24;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: var(--space-3xl) 0;
+}
+
+.footer-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+}
+
+.footer-section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-primary);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.footer-section-title svg {
+    color: var(--color-accent);
+}
+
+.footer-posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.footer-post-item {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-post-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.footer-post-thumb {
+    flex-shrink: 0;
+    width: 70px;
+    height: 55px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.footer-post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-post-thumb-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-md);
+}
+
+.footer-post-info h4 {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.footer-post-info h4 a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color var(--transition-fast);
+}
+
+.footer-post-info h4 a:hover {
+    color: var(--color-accent);
+}
+
+.footer-post-meta {
+    display: flex;
+    gap: var(--space-md);
+    font-size: 0.75rem;
+}
+
+.footer-post-date {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-annonce-price {
+    color: var(--color-accent-light);
+    font-weight: 600;
+}
+
+.footer-reading-time {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-view-all {
+    display: inline-block;
+    margin-top: var(--space-lg);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: color var(--transition-fast);
+}
+
+.footer-view-all:hover {
+    color: var(--color-accent-light);
+}
+
+.footer-empty {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .footer-main {
