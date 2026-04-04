@@ -1,0 +1,349 @@
+/* ═══════════════════════════════════════════════════════════════
+   Agence Murailles - Responsive Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (max 1024px) ───────────────────────────────────── */
+@media (max-width: 1024px) {
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .types-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-preview-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .property-sidebar {
+        position: static;
+    }
+
+    .detail-specs-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-form-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .blog-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+/* ── Mobile Landscape (max 768px) ──────────────────────────── */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1rem;
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+
+    /* Header */
+    .header-top {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .primary-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-white);
+        flex-direction: column;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--color-gray-100);
+        padding: var(--space-md) 0;
+    }
+
+    .primary-menu.is-open {
+        display: flex;
+    }
+
+    .primary-menu li a {
+        padding: 0.75rem var(--container-padding);
+    }
+
+    .primary-menu li ul.sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding-left: var(--space-xl);
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .main-navigation {
+        position: relative;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        min-height: 500px;
+    }
+
+    /* Properties */
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-toolbar {
+        flex-direction: column;
+        gap: var(--space-md);
+        align-items: flex-start;
+    }
+
+    /* Types */
+    .types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Agents */
+    .agents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Blog */
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-main .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Single Property */
+    .property-header-content {
+        flex-direction: column;
+    }
+
+    .detail-specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-title {
+        font-size: 1.5rem;
+    }
+
+    .property-price-large {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Stats */
+    .about-preview-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA */
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Form */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pagination */
+    .nav-links {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+}
+
+/* ── Mobile Portrait (max 480px) ───────────────────────────── */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        min-height: 420px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .types-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .type-card {
+        padding: var(--space-lg);
+    }
+
+    .agents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-preview-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .detail-specs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-thumbs {
+        gap: 4px;
+    }
+
+    .gallery-thumb {
+        width: 70px;
+        height: 52px;
+    }
+
+    .error-404-title {
+        font-size: 5rem;
+    }
+
+    .error-404-actions {
+        flex-direction: column;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .share-buttons {
+        flex-direction: column;
+    }
+
+    .share-btn {
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .page-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* ── Print Styles ──────────────────────────────────────────── */
+@media print {
+    .site-header,
+    .site-footer,
+    .hero-section,
+    .cta-section,
+    .menu-toggle,
+    .share-buttons,
+    .btn,
+    .property-inquiry-form {
+        display: none !important;
+    }
+
+    body {
+        color: #000;
+        background: #fff;
+    }
+
+    .property-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
