@@ -13,19 +13,43 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue front-end styles and scripts.
  */
 function am_enqueue_assets() {
-    // Google Fonts - Inter
+    // Google Fonts - Roboto (ThemeForest style)
     wp_enqueue_style(
         'am-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700&display=swap',
         array(),
         null
+    );
+
+    // Font Awesome 6
+    wp_enqueue_style(
+        'am-fontawesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+        array(),
+        '6.5.1'
+    );
+
+    // jQuery UI (for price slider)
+    wp_enqueue_style(
+        'am-jquery-ui',
+        AM_THEME_URI . '/assets/css/vendor/jquery-ui.min.css',
+        array(),
+        '1.10.2'
+    );
+
+    // Bootstrap Select
+    wp_enqueue_style(
+        'am-bootstrap-select',
+        AM_THEME_URI . '/assets/css/vendor/bootstrap-select.min.css',
+        array(),
+        '1.14.0'
     );
 
     // Main stylesheet
     wp_enqueue_style(
         'am-main-style',
         AM_THEME_URI . '/assets/css/main.css',
-        array(),
+        array( 'am-fontawesome', 'am-jquery-ui', 'am-bootstrap-select' ),
         AM_THEME_VERSION
     );
 
@@ -44,6 +68,11 @@ function am_enqueue_assets() {
         array( 'am-main-style' ),
         AM_THEME_VERSION
     );
+
+    // jQuery UI JS (for price slider on search pages)
+    if ( is_post_type_archive( 'property' ) || is_post_type_archive( 'annonce' ) || is_front_page() || is_tax() ) {
+        wp_enqueue_script( 'jquery-ui-slider' );
+    }
 
     // Navigation JS
     wp_enqueue_script(

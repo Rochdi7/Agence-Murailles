@@ -40,17 +40,18 @@
         });
     }
 
-    // Sticky header shadow on scroll
+    // Sticky header shadow on scroll (supports transparent header)
     if (header) {
-        let lastScroll = 0;
+        const isTransparent = header.classList.contains('header_transparent');
+        const scrollThreshold = isTransparent ? 100 : 50;
+
         window.addEventListener('scroll', function () {
             const currentScroll = window.pageYOffset;
-            if (currentScroll > 50) {
+            if (currentScroll > scrollThreshold) {
                 header.classList.add('is-scrolled');
             } else {
                 header.classList.remove('is-scrolled');
             }
-            lastScroll = currentScroll;
         }, { passive: true });
     }
 })();

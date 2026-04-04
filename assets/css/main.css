@@ -2,40 +2,85 @@
    Agence Murailles - Main Stylesheet
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── CSS Custom Properties ─────────────────────────────────── */
+/* ── CSS Custom Properties (WP Estate / ThemeForest Inspired) ─ */
 :root {
-    /* Colors */
-    --color-primary: #1a3a5c;
-    --color-primary-dark: #0f2740;
-    --color-primary-light: #2a5a8c;
-    --color-accent: #c8a45e;
-    --color-accent-dark: #b08d3e;
-    --color-accent-light: #e0c67e;
-    --color-success: #28a745;
+    /* ── Primary Theme Colors ── */
+    --color-primary: #0073e1;
+    --color-primary-dark: #0059b3;
+    --color-primary-light: #3d9bff;
+    --color-secondary: #69c17d;
+    --color-accent: #0073e1;
+    --color-accent-dark: #0059b3;
+    --color-accent-light: #3d9bff;
+    --color-success: #69c17d;
     --color-danger: #dc3545;
-    --color-warning: #ffc107;
+    --color-warning: #ffc662;
 
-    /* Neutrals */
+    /* ── Neutrals ── */
     --color-white: #ffffff;
-    --color-off-white: #f8f9fa;
-    --color-light: #f1f3f5;
-    --color-gray-100: #e9ecef;
-    --color-gray-200: #dee2e6;
-    --color-gray-300: #ced4da;
-    --color-gray-400: #adb5bd;
-    --color-gray-500: #6c757d;
-    --color-gray-600: #495057;
-    --color-gray-700: #343a40;
-    --color-dark: #212529;
+    --color-off-white: #f8f8f8;
+    --color-light: #f1f8ff;
+    --color-gray-100: #efefef;
+    --color-gray-200: #e2e8f0;
+    --color-gray-300: #cbd5e1;
+    --color-gray-400: #94a3b8;
+    --color-gray-500: #5c727d;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+    --color-dark: #222222;
     --color-black: #000000;
 
-    /* Typography */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-size-base: 16px;
-    --line-height-base: 1.6;
+    /* ── Text Colors ── */
+    --color-body: #5c727d;
+    --color-heading: #222222;
+    --color-link: #222222;
+    --color-breadcrumb: #8593a9;
 
-    /* Spacing */
+    /* ── Unit / Card Colors ── */
+    --unit-bg: #ffffff;
+    --unit-border: #f1f8ff;
+    --unit-border-size: 1px;
+    --unit-radius: 8px;
+
+    /* ── Header ── */
+    --header-bg: #ffffff;
+    --header-height: 90px;
+    --header-sticky-height: 80px;
+    --menu-font: #222222;
+    --menu-hover: #0073e1;
+    --mobile-header-bg: #222222;
+    --mobile-menu-bg: #001a33;
+
+    /* ── Top Bar ── */
+    --topbar-bg: #001a33;
+    --topbar-font: #bbb;
+
+    /* ── Footer ── */
+    --footer-bg: #001a33;
+    --footer-copy-bg: #001028;
+    --footer-font: #bbb;
+    --footer-heading: #ffffff;
+    --footer-social-bg: #002547;
+
+    /* ── Search ── */
+    --search-bg: #efefef;
+    --search-wrapper-bg: #0073e1;
+
+    /* ── Typography ── */
+    --font-primary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Roboto', -apple-system, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-size-base: 15px;
+    --line-height-base: 1.65;
+
+    /* ── Font Sizes ── */
+    --h1-size: 34px;
+    --h2-size: 28px;
+    --h3-size: 24px;
+    --h4-size: 18px;
+    --h5-size: 14px;
+
+    /* ── Spacing ── */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -45,25 +90,26 @@
     --space-3xl: 4rem;
     --space-4xl: 6rem;
 
-    /* Borders */
+    /* ── Borders ── */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
     --radius-xl: 16px;
     --radius-full: 50%;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
-    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+    /* ── Shadows (WP Estate style) ── */
+    --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 3px 1px 20px 0 rgba(0, 110, 225, 0.08);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
+    --shadow-card: 0 0 12px rgba(0, 0, 0, 0.06);
 
-    /* Transitions */
+    /* ── Transitions ── */
     --transition-fast: 0.15s ease;
-    --transition-base: 0.3s ease;
+    --transition-base: 0.3s ease-out;
     --transition-slow: 0.5s ease;
 
-    /* Container */
+    /* ── Container ── */
     --container-max: 1200px;
     --container-padding: 1.5rem;
 }
@@ -85,9 +131,11 @@ html {
 
 body {
     font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 400;
     line-height: var(--line-height-base);
-    color: var(--color-gray-700);
-    background-color: var(--color-white);
+    color: var(--color-body);
+    background-color: var(--color-off-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -99,13 +147,13 @@ img {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-link);
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: color var(--transition-base);
 }
 
 a:hover {
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 ul, ol {
@@ -114,15 +162,16 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--color-dark);
-    line-height: 1.3;
-    font-weight: 600;
+    color: var(--color-heading);
+    line-height: 1.3em;
+    font-weight: 500;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); }
+h5 { font-size: var(--h5-size); }
 
 p {
     margin-bottom: var(--space-md);
@@ -147,11 +196,11 @@ p {
 .section-subtitle {
     display: inline-block;
     font-family: var(--font-primary);
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-bottom: var(--space-sm);
 }
 
@@ -213,25 +262,29 @@ p {
 }
 
 .btn-primary {
-    background-color: var(--color-accent);
+    background-image: linear-gradient(to right, var(--color-primary) 50%, var(--color-white) 50%);
+    background-size: 200% 100%;
+    background-position: 0 100%;
     color: var(--color-white);
-    border-color: var(--color-accent);
+    border-color: var(--color-primary);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-accent-dark);
-    border-color: var(--color-accent-dark);
-    color: var(--color-white);
+    background-position: 100% 100%;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .btn-outline {
-    background-color: transparent;
+    background-image: linear-gradient(to right, var(--color-primary) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 100%;
     color: var(--color-primary);
     border-color: var(--color-primary);
 }
 
 .btn-outline:hover {
-    background-color: var(--color-primary);
+    background-position: 0 100%;
     color: var(--color-white);
 }
 
@@ -273,20 +326,22 @@ p {
     justify-content: center;
 }
 
-/* ── Header ────────────────────────────────────────────────── */
+/* ── Header (WPResidence-style) ────────────────────────────── */
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-sm);
+    z-index: 9999;
+    background-color: var(--header-bg);
+    transition: all var(--transition-base);
 }
 
+/* ── Top Bar ──────────────────────────────────────────────── */
 .header-top {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 0.8125rem;
-    padding: 0.5rem 0;
+    background-color: var(--topbar-bg);
+    color: var(--topbar-font);
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-top-content {
@@ -295,39 +350,68 @@ p {
     align-items: center;
 }
 
-.header-contact-info {
-    display: flex;
-    gap: var(--space-lg);
-}
-
-.header-contact-info span {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-}
-
-.header-contact-info svg {
-    opacity: 0.8;
-}
-
+/* Social icons (LEFT side of top bar) */
 .header-social {
     display: flex;
-    gap: var(--space-md);
+    align-items: center;
+    gap: 0;
 }
 
 .header-social a {
     color: var(--color-white);
-    opacity: 0.8;
+    opacity: 0.85;
     transition: opacity var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
 }
 
 .header-social a:hover {
     opacity: 1;
+}
+
+/* Contact info (RIGHT side of top bar) */
+.header-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.header-info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-white);
+    font-size: 13px;
+    text-decoration: none;
+    padding: 4px 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    transition: color var(--transition-fast);
+}
+
+.header-info-item:first-child {
+    border-left: none;
+}
+
+.header-info-item:hover {
     color: var(--color-accent-light);
 }
 
+.header-info-item i {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* ── Main Navigation ──────────────────────────────────────── */
 .main-navigation {
-    padding: 0.75rem 0;
+    padding: 0;
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
@@ -337,6 +421,7 @@ p {
     gap: var(--space-lg);
 }
 
+/* Logo */
 .site-branding {
     flex-shrink: 0;
 }
@@ -350,17 +435,19 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-primary);
+    letter-spacing: -0.5px;
 }
 
 .site-title-link:hover .site-title {
     color: var(--color-accent);
 }
 
-/* Navigation Menu */
+/* Navigation Menu (centered) */
 .primary-menu {
     display: flex;
     align-items: center;
     gap: 0;
+    margin: 0 auto;
 }
 
 .primary-menu li {
@@ -410,6 +497,66 @@ p {
     font-size: 0.875rem;
 }
 
+/* Header Right (phone + user + CTA) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-shrink: 0;
+}
+
+.header-nav-phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.header-nav-phone i {
+    font-size: 14px;
+    color: var(--color-primary);
+}
+
+.header-user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    color: var(--color-dark);
+    transition: color var(--transition-fast);
+}
+
+.header-user-icon:hover {
+    color: var(--color-primary);
+}
+
+/* CTA button */
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.header-cta:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
@@ -429,26 +576,144 @@ p {
     transition: all var(--transition-base);
 }
 
-.header-cta {
-    flex-shrink: 0;
+/* ── Transparent Header (overlays hero on front page) ─────── */
+.site-header.header_transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
 }
 
-/* ── Hero Section ──────────────────────────────────────────── */
+.site-header.header_transparent .header-top {
+    background-color: rgba(0, 26, 51, 0.55);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header.header_transparent .main-navigation {
+    background-color: rgba(0, 26, 51, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header.header_transparent .primary-menu li a {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.site-header.header_transparent .primary-menu li a:hover,
+.site-header.header_transparent .primary-menu li.current-menu-item a,
+.site-header.header_transparent .primary-menu li.current_page_item a {
+    color: var(--color-accent-light);
+}
+
+.site-header.header_transparent .site-title {
+    color: #ffffff;
+}
+
+.site-header.header_transparent .hamburger-line {
+    background-color: #ffffff;
+}
+
+.site-header.header_transparent .header-nav-phone {
+    color: #ffffff;
+}
+
+.site-header.header_transparent .header-nav-phone i {
+    color: #ffffff;
+}
+
+.site-header.header_transparent .header-user-icon {
+    color: #ffffff;
+}
+
+.site-header.header_transparent .header-cta {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.site-header.header_transparent .header-cta:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.site-header.header_transparent .custom-logo {
+    filter: brightness(0) invert(1);
+    transition: filter var(--transition-base);
+}
+
+/* ── Scrolled: solid white ────────────────────────────────── */
+.site-header.header_transparent.is-scrolled {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.08);
+}
+
+.site-header.header_transparent.is-scrolled .header-top {
+    background-color: var(--topbar-bg);
+}
+
+.site-header.header_transparent.is-scrolled .main-navigation {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.site-header.header_transparent.is-scrolled .primary-menu li a {
+    color: var(--color-gray-700);
+}
+
+.site-header.header_transparent.is-scrolled .primary-menu li a:hover,
+.site-header.header_transparent.is-scrolled .primary-menu li.current-menu-item a {
+    color: var(--color-accent);
+}
+
+.site-header.header_transparent.is-scrolled .site-title {
+    color: var(--color-primary);
+}
+
+.site-header.header_transparent.is-scrolled .hamburger-line {
+    background-color: var(--color-dark);
+}
+
+.site-header.header_transparent.is-scrolled .header-nav-phone {
+    color: var(--color-dark);
+}
+
+.site-header.header_transparent.is-scrolled .header-nav-phone i {
+    color: var(--color-primary);
+}
+
+.site-header.header_transparent.is-scrolled .header-user-icon {
+    color: var(--color-dark);
+}
+
+.site-header.header_transparent.is-scrolled .custom-logo {
+    filter: none;
+}
+
+/* Non-transparent scrolled state */
+.site-header:not(.header_transparent).is-scrolled {
+    box-shadow: 3px 1px 20px 0 rgba(0, 110, 225, 0.08);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* ── Hero Section (WP Estate Slider Inspired) ──────────────── */
 .hero-section {
     position: relative;
-    min-height: 600px;
+    min-height: 580px;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-light));
+    background: #1d293e;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.03)" d="M0,96L48,112C96,128,192,160,288,176C384,192,480,192,576,176C672,160,768,128,864,128C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"/></svg>');
-    background-size: cover;
-    background-position: bottom;
+    background-color: #1d293e;
+    opacity: 0.45;
 }
 
 .hero-content {
@@ -460,11 +725,13 @@ p {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-family: var(--font-display);
+    font-size: 60px;
     font-weight: 700;
     color: var(--color-white);
     margin-bottom: var(--space-lg);
     line-height: 1.15;
+    text-shadow: 1px 1px 3px rgba(68, 68, 68, 0.5);
 }
 
 .hero-highlight {
@@ -487,10 +754,19 @@ p {
 
 /* ── Page Hero (Interior pages) ────────────────────────────── */
 .page-hero {
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    background: var(--color-primary);
     color: var(--color-white);
     padding: var(--space-4xl) 0;
     text-align: center;
+    position: relative;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.15), transparent);
+    pointer-events: none;
 }
 
 .page-hero-small {
@@ -509,7 +785,7 @@ p {
     margin: 0 auto;
 }
 
-/* ── Property Search Form ──────────────────────────────────── */
+/* ── Property Search Form (WP Estate Advanced Search) ──────── */
 .search-section {
     padding: var(--space-2xl) 0;
     background-color: var(--color-off-white);
@@ -517,9 +793,11 @@ p {
 
 .property-search-form {
     background: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    box-shadow: var(--shadow-md);
+    border-radius: var(--unit-radius);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 99;
 }
 
 .search-form-grid {
@@ -546,23 +824,38 @@ p {
 .form-group input,
 .form-group select,
 .form-group textarea {
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--color-gray-200);
-    border-radius: var(--radius-md);
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
     font-family: var(--font-primary);
-    font-size: 0.9375rem;
-    color: var(--color-gray-700);
-    transition: border-color var(--transition-fast);
-    background-color: var(--color-white);
+    font-size: 14px;
+    color: var(--color-dark);
+    transition: all var(--transition-base);
+    background-color: var(--search-bg);
     width: 100%;
+    height: 44px;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235c727d' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 30px;
+}
+
+.form-group textarea {
+    height: auto;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(200, 164, 94, 0.15);
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(0, 115, 225, 0.1);
 }
 
 .form-group-submit {
@@ -622,20 +915,23 @@ p {
     gap: var(--space-xl);
 }
 
-/* ── Property Card ─────────────────────────────────────────── */
+/* ── Property Card (WP Estate Inspired) ────────────────────── */
 .property-card {
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
+    background: var(--unit-bg);
+    border: var(--unit-border-size) solid var(--unit-border);
+    border-radius: var(--unit-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition-base);
+    transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    max-width: 525px;
+    margin: 0 auto;
 }
 
 .property-card:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .property-card-image {
@@ -648,11 +944,25 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform var(--transition-slow);
+    transition: all 0.7s ease;
 }
 
 .property-card:hover .property-card-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Featured gradient overlay on card image */
+.property-card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent 56%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .property-card-badges {
@@ -663,33 +973,39 @@ p {
     gap: var(--space-xs);
 }
 
+/* Ribbon-style badges (WP Estate) */
 .property-badge {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: var(--radius-sm);
+    padding: 0 10px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: var(--unit-radius);
     color: var(--color-white);
     background-color: var(--color-primary);
+    line-height: 24px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 .badge-for-sale,
-.badge-a-vendre { background-color: var(--color-success); }
+.badge-a-vendre { background-color: var(--color-secondary); }
 .badge-for-rent,
-.badge-a-louer { background-color: var(--color-primary-light); }
+.badge-a-louer { background-color: var(--color-primary); }
 .badge-sold,
 .badge-vendu { background-color: var(--color-danger); }
+.badge-new,
+.badge-nouveau { background-color: #d33; }
 
 .property-card-price {
     position: absolute;
-    bottom: var(--space-md);
-    right: var(--space-md);
-    background-color: rgba(26, 58, 92, 0.9);
+    bottom: 15px;
+    left: 12px;
     color: var(--color-white);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 17px;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .property-card-body {
@@ -706,10 +1022,9 @@ p {
 }
 
 .property-type-label {
-    color: var(--color-accent);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .property-city-label {
@@ -755,7 +1070,7 @@ p {
 }
 
 .property-specs .spec svg {
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .property-card-footer {
@@ -794,7 +1109,7 @@ p {
 
 .type-icon {
     margin-bottom: var(--space-md);
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .type-name {
@@ -848,9 +1163,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(200, 164, 94, 0.1);
+    background-color: rgba(0, 115, 225, 0.08);
     border-radius: var(--radius-md);
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .feature-item h4 {
@@ -886,10 +1201,10 @@ p {
 
 .stat-number {
     display: block;
-    font-family: var(--font-heading);
+    font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--color-accent);
+    color: var(--color-primary);
     line-height: 1;
     margin-bottom: var(--space-sm);
 }
@@ -932,17 +1247,21 @@ p {
 }
 
 .agent-card {
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
+    background: var(--unit-bg);
+    border: var(--unit-border-size) solid var(--unit-border);
+    border-radius: var(--unit-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
     text-align: center;
-    transition: all var(--transition-base);
+    transition: all 0.4s ease;
+    height: 100%;
+    max-width: 525px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 50px;
 }
 
 .agent-card:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
 }
 
 .agent-card-image {
@@ -954,6 +1273,12 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.7s ease;
+}
+
+.agent-card:hover .agent-card-image img {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
 
 .agent-avatar-placeholder {
@@ -977,9 +1302,9 @@ p {
 
 .agent-position {
     display: block;
-    font-size: 0.875rem;
-    color: var(--color-accent);
-    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-primary);
+    font-weight: 400;
     margin-bottom: var(--space-sm);
 }
 
@@ -1077,12 +1402,13 @@ p {
 }
 
 .star {
-    font-size: 1rem;
+    font-size: 13px;
     color: var(--color-gray-300);
+    margin: 0 2px;
 }
 
 .star.filled {
-    color: var(--color-warning);
+    color: #ffc662;
 }
 
 .testimonial-author {
@@ -1171,8 +1497,8 @@ p {
 }
 
 .post-category a {
-    color: var(--color-accent);
-    font-weight: 600;
+    color: var(--color-primary);
+    font-weight: 500;
 }
 
 .post-card-title {
@@ -1198,13 +1524,13 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary);
 }
 
 .read-more-link:hover {
-    color: var(--color-accent-dark);
+    color: var(--color-primary-dark);
 }
 
 .read-more-link svg {
@@ -1217,9 +1543,19 @@ p {
 
 /* ── CTA Section ───────────────────────────────────────────── */
 .cta-section {
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-light));
+    background: var(--color-primary);
     color: var(--color-white);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.15), transparent);
+    pointer-events: none;
 }
 
 .cta-content h2 {
@@ -1262,13 +1598,14 @@ p {
 }
 
 .property-type-tag {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: var(--radius-sm);
-    background-color: rgba(200, 164, 94, 0.15);
-    color: var(--color-accent);
+    padding: 0 10px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: var(--unit-radius);
+    background-color: rgba(0, 115, 225, 0.1);
+    color: var(--color-primary);
+    line-height: 24px;
 }
 
 .property-title {
@@ -1285,10 +1622,10 @@ p {
 }
 
 .property-price-large {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-accent);
+    font-family: var(--font-primary);
+    font-size: var(--h2-size);
+    font-weight: 500;
+    color: var(--color-primary);
     white-space: nowrap;
 }
 
@@ -1364,10 +1701,11 @@ p {
 }
 
 .detail-card-title {
-    font-size: 1.25rem;
+    font-size: var(--h4-size);
+    font-weight: 500;
     margin-bottom: var(--space-lg);
     padding-bottom: var(--space-md);
-    border-bottom: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .detail-specs-grid {
@@ -1594,9 +1932,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(200, 164, 94, 0.1);
+    background-color: rgba(0, 115, 225, 0.08);
     border-radius: var(--radius-md);
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .contact-info-card h4 {
@@ -1655,7 +1993,7 @@ p {
 .error-404-title {
     font-size: 8rem;
     font-weight: 800;
-    color: var(--color-accent);
+    color: var(--color-primary);
     line-height: 1;
     margin-bottom: var(--space-md);
 }
@@ -1845,11 +2183,12 @@ p {
 }
 
 .widget-title {
-    font-size: 1rem;
+    font-size: var(--h5-size);
     font-family: var(--font-primary);
+    font-weight: 500;
     margin-bottom: var(--space-md);
     padding-bottom: var(--space-sm);
-    border-bottom: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .widget-list {
@@ -2049,15 +2388,15 @@ p {
 .share-twitter { background-color: #1da1f2; }
 .share-linkedin { background-color: #0a66c2; }
 
-/* ── Footer ────────────────────────────────────────────────── */
+/* ── Footer (WP Estate Dark Navy) ──────────────────────────── */
 .site-footer {
-    background-color: var(--color-dark);
-    color: rgba(255, 255, 255, 0.75);
+    background-color: var(--footer-bg);
+    color: var(--footer-font);
 }
 
 /* Footer Top Section (Annonces + Blog) */
 .footer-top-section {
-    background-color: #1a1e24;
+    background-color: var(--footer-social-bg);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding: var(--space-3xl) 0;
 }
@@ -2196,9 +2535,9 @@ p {
 
 .footer-title {
     font-family: var(--font-primary);
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--color-white);
+    font-size: var(--h4-size);
+    font-weight: 500;
+    color: var(--footer-heading);
     margin-bottom: var(--space-lg);
 }
 
@@ -2259,10 +2598,12 @@ p {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--footer-copy-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding: var(--space-lg) 0;
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* ── Pagination ────────────────────────────────────────────── */
@@ -2387,11 +2728,6 @@ p {
     transform: translateY(0);
 }
 
-/* Scrolled Header */
-.site-header.is-scrolled {
-    box-shadow: var(--shadow-md);
-}
-
 /* Hamburger Animation */
 .menu-toggle.is-active .hamburger-line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
@@ -2403,4 +2739,1322 @@ p {
 
 .menu-toggle.is-active .hamburger-line:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   WPResidence-Inspired Classes (Homepage) — COMPLETE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Bootstrap Form Control ────────────────────────────────── */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 10px 15px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-dark);
+    background-color: var(--search-bg);
+    border: 1px solid #dde3ec;
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235c727d' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 115, 225, 0.1);
+}
+
+/* ── Hero Section (WPResidence Elementor-exact) ────────────── */
+.wpestate_hero_section {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    overflow: visible;
+    padding: 140px 0 80px;
+}
+
+.wpestate_hero_section .elementor-background-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #1d293e;
+    opacity: 0.45;
+    z-index: 1;
+}
+
+.wpestate_hero_section > .elementor-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.wpestate_hero_section .elementor-top-column {
+    width: 100%;
+}
+
+.wpestate_hero_section .elementor-widget-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wpestate_hero_section .elementor-inner-section {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.wpestate_hero_section .elementor-inner-section .elementor-widget-wrap {
+    align-items: center;
+}
+
+/* Hero Heading */
+.elementor-heading-title.elementor-size-default {
+    font-family: var(--font-display);
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(68, 68, 68, 0.5);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Hero Subtitle */
+.wpestate_hero_section .elementor-widget-text-editor {
+    margin-bottom: 0;
+}
+
+.wpestate_hero_section .elementor-widget-text-editor p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Search Form Builder — full width inside hero */
+.wpestate_hero_section .elementor-widget-WpResidence_Search_Form_Builder {
+    width: 100%;
+    max-width: 1140px;
+}
+
+/* ── Search Wrapper (WPResidence exact) ────────────────────── */
+.search_wrapper {
+    background: transparent;
+    position: relative;
+    z-index: 99;
+    border-radius: var(--unit-radius);
+}
+
+.search_wrapper_color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: var(--unit-radius);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+    z-index: -1;
+}
+
+.wpestate-adv-holder {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Search Tabs (underline active style — WPResidence exact) ─ */
+.adv_search_tab {
+    position: relative;
+}
+
+.adv_search_tab .nav-tabs {
+    display: flex;
+    gap: 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 0 25px;
+    margin: 0;
+    list-style: none;
+}
+
+.adv_search_tab_item {
+    position: relative;
+}
+
+.adv_search_tab_item a {
+    display: block;
+    padding: 18px 25px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-gray-500);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.2s ease;
+}
+
+.adv_search_tab_item.active a,
+.adv_search_tab_item a:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.tab-content {
+    padding: 22px 25px 25px;
+}
+
+.tab-pane { display: none; }
+.tab-pane.active.show { display: block; }
+
+/* ── WPResidence Custom Select Button (wpestate-multiselect) ── */
+.wpestate-multiselect-custom-style {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 35px 0 15px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-gray-500);
+    background-color: var(--search-bg);
+    border: 1px solid #dde3ec;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.wpestate-multiselect-custom-style:hover,
+.wpestate-multiselect-custom-style:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.wpestate-multiselect-custom-style::after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--color-gray-400);
+    pointer-events: none;
+}
+
+.filter-option {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filter-option-inner-inner {
+    color: var(--color-gray-500);
+}
+
+/* Bootstrap select wrapper inside form */
+.dropdown.bootstrap-select.form-control {
+    padding: 0;
+    border: none;
+    height: auto;
+    background: none;
+    background-image: none;
+}
+
+.dropdown.bootstrap-select .wpestate-multiselect-custom-style {
+    background-image: none;
+}
+
+/* Beds/Baths & Price popup component */
+.wpestate-beds-baths-popoup-component {
+    position: relative;
+}
+
+.wpestate-beds-baths-popoup-component .wpestate-multiselect-custom-style {
+    background-image: none;
+}
+
+.btn-group {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn-default,
+.btn-light {
+    background-color: var(--search-bg);
+    color: var(--color-gray-500);
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+/* ── Search Form Fields Row ────────────────────────────────── */
+
+.search-fields-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-end;
+}
+
+.elementor-field-group {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.elementor-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.elemenentor_submit_wrapper {
+    flex: 0 0 auto;
+}
+
+.wpresidence_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 30px;
+    height: 48px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.wpresidence_button:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 15px rgba(0, 115, 225, 0.3);
+}
+
+.search_button i {
+    font-size: 14px;
+}
+
+/* ── Places / Categories Grid (WPResidence) ────────────────── */
+.wpresidence_shortcode_listings_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.places_wrapper_type_3 {
+    padding: 8px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.places_square_backgorund_image {
+    position: relative;
+    border-radius: var(--unit-radius);
+    overflow: hidden;
+    min-height: 230px;
+    background-size: cover;
+    background-position: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.places_square_backgorund_image:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.places_cover {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 65%);
+    z-index: 1;
+    transition: all 0.4s ease;
+    display: block;
+}
+
+.places_square_backgorund_image:hover .places_cover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15) 65%);
+}
+
+.property_listing_square_details {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #fff;
+}
+
+.property_listing_square_details h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.property_location_type_3 {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* ── Property Listing Card (WPResidence) ───────────────────── */
+.property_listing {
+    background: var(--unit-bg);
+    border: var(--unit-border-size) solid var(--unit-border);
+    border-radius: var(--unit-radius);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.property_listing:hover {
+    box-shadow: 0 8px 30px rgba(0, 110, 225, 0.12);
+    transform: translateY(-3px);
+}
+
+.property_card_default {
+    max-width: 525px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ── Card Image Wrapper ────────────────────────────────────── */
+.listing-unit-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.listing-unit-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.7s ease;
+    aspect-ratio: 16/11;
+    object-fit: cover;
+}
+
+.property_listing:hover .listing-unit-img-wrapper img {
+    transform: scale(1.08);
+    opacity: 0.92;
+}
+
+/* ── Overlay Info on Image ─────────────────────────────────── */
+.prop_new_details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 15px 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.property_media {
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.9;
+}
+
+.property_location_image {
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 0.9;
+}
+
+.featured_gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent 56%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ── Tags / Badges on Card ─────────────────────────────────── */
+.tag-wrapper {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: flex-start;
+}
+
+.featured_div {
+    background-color: var(--color-secondary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 11px;
+    line-height: 26px;
+    border-radius: var(--unit-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.status-wrapper {
+    display: flex;
+    gap: 6px;
+}
+
+.action_tag_wrapper {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 11px;
+    line-height: 26px;
+    border-radius: var(--unit-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-transform: capitalize;
+}
+
+.action_tag_wrapper.Location { background-color: #0d6efd; }
+.action_tag_wrapper.Vente,
+.action_tag_wrapper.Sales { background-color: var(--color-secondary); }
+
+.ribbon-inside {
+    background-color: rgba(0, 115, 225, 0.85);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 11px;
+    line-height: 26px;
+    border-radius: var(--unit-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-transform: capitalize;
+}
+
+.ribbon-inside.New,
+.ribbon-inside.Nouveau { background-color: #d33; }
+
+/* ── Card Body Content ─────────────────────────────────────── */
+.property-unit-information-wrapper {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-unit-information-wrapper h4 {
+    font-size: var(--h4-size);
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.property-unit-information-wrapper h4 a {
+    color: var(--color-heading);
+    transition: color 0.2s ease;
+}
+
+.property-unit-information-wrapper h4 a:hover {
+    color: var(--color-primary);
+}
+
+.listing_unit_price_wrapper {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.listing_details {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-body);
+    margin-bottom: 15px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── Property Specs Row ────────────────────────────────────── */
+.property_listing_details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 18px;
+    row-gap: 6px;
+    padding-top: 15px;
+    border-top: 1px solid var(--unit-border);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-body);
+}
+
+.property_listing_details span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.property_listing_details i,
+.property_listing_details svg {
+    color: var(--color-primary);
+    font-size: 14px;
+    width: 16px;
+}
+
+.unit_details_x {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.unit_details_x:hover {
+    text-decoration: underline;
+}
+
+/* ── Property Agent + Actions Row ──────────────────────────── */
+.property_location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid var(--unit-border);
+}
+
+.property_agent_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.property_agent_image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.property_agent_image_sign {
+    font-size: 20px;
+    color: var(--color-gray-400);
+    line-height: 1;
+}
+
+.wpestate_card_agent_link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-heading);
+}
+
+.wpestate_card_agent_link:hover {
+    color: var(--color-primary);
+}
+
+.listing_actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.share_unit {
+    display: flex;
+    gap: 12px;
+}
+
+.share_unit a {
+    font-size: 15px;
+    color: var(--color-gray-400);
+    transition: color 0.2s ease;
+}
+
+.share_unit a:hover {
+    color: var(--color-primary);
+}
+
+/* ── Agent Unit (WPResidence) ──────────────────────────────── */
+.wpresidence_agent_unit_wrapper {
+    margin-bottom: 25px;
+}
+
+.agent_unit {
+    background: var(--unit-bg);
+    border: var(--unit-border-size) solid var(--unit-border);
+    border-radius: var(--unit-radius);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    padding-bottom: 65px;
+}
+
+.agent_unit:hover {
+    box-shadow: 0 8px 30px rgba(0, 110, 225, 0.1);
+}
+
+.agent-unit-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-unit-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.7s ease;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.agent_unit:hover .agent-unit-img-wrapper img {
+    transform: scale(1.08);
+    opacity: 0.92;
+}
+
+.agent_card_my_listings {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 11px;
+    line-height: 26px;
+    border-radius: var(--unit-radius);
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.agent_unit h4 {
+    font-size: var(--h4-size);
+    font-weight: 500;
+    padding: 20px 20px 0;
+    margin-bottom: 3px;
+}
+
+.agent_unit h4 a {
+    color: var(--color-heading);
+}
+
+.agent_unit h4 a:hover {
+    color: var(--color-primary);
+}
+
+.agent_unit .agent_position {
+    font-size: 14px;
+    color: var(--color-primary);
+    padding: 0 20px;
+    margin-bottom: 12px;
+}
+
+.agent_card_content {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-body);
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.agent_unit_social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid var(--unit-border);
+    background: var(--unit-bg);
+}
+
+.wpestate_agent_unit_social {
+    display: flex;
+    gap: 14px;
+}
+
+.wpestate_agent_unit_social a {
+    font-size: 16px;
+    color: var(--color-gray-400);
+    transition: color 0.2s ease;
+}
+
+.wpestate_agent_unit_social a:hover {
+    color: var(--color-primary);
+}
+
+.agent_unit_phone,
+.agent_unit_email {
+    display: inline-block;
+}
+
+.agent_unit_phone a,
+.agent_unit_email a {
+    font-size: 16px;
+    color: var(--color-gray-400);
+    transition: color 0.2s ease;
+    margin-left: 10px;
+}
+
+.agent_unit_phone a:hover,
+.agent_unit_email a:hover {
+    color: var(--color-primary);
+}
+
+/* ── Testimonial (WPResidence type_class_4) ────────────────── */
+.testimonial-container {
+    background: #fff;
+    border-radius: var(--unit-radius);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.type_class_4 .testimonial-image {
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.testimonial-author-line {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-heading);
+    padding-top: 6px;
+    line-height: 1.3;
+}
+
+.testimonial-location-line {
+    font-size: 13px;
+    color: var(--color-gray-500);
+    margin-bottom: 16px;
+}
+
+.type_class_4 .testimonial-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-body);
+    clear: both;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+.testimmonials_starts {
+    color: #ffc662;
+    font-size: 13px;
+    display: flex;
+    gap: 3px;
+}
+
+.testimmonials_starts i {
+    color: #ffc662;
+}
+
+/* ── Bootstrap-like Grid Helpers ───────────────────────────── */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+[class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+.col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+.col-md-3 { flex: 0 0 25%; max-width: 25%; }
+.col-md-6 { flex: 0 0 50%; max-width: 50%; }
+.col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+.col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+.col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+
+.m-0 { margin: 0 !important; }
+.d-flex { display: flex !important; }
+.w-100 { width: 100% !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.img-responsive { max-width: 100%; height: auto; }
+
+/* ── Responsive WPResidence ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .search-fields-row {
+        flex-wrap: wrap;
+    }
+    .elementor-field-group {
+        flex: 0 0 calc(33.333% - 10px);
+    }
+    .elemenentor_submit_wrapper {
+        flex: 0 0 calc(33.333% - 10px);
+    }
+    .heading_over_image {
+        font-size: 42px;
+    }
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-fields-row {
+        flex-direction: column;
+    }
+    .elementor-field-group,
+    .elemenentor_submit_wrapper {
+        flex: 0 0 100%;
+    }
+    .heading_over_image {
+        font-size: 30px;
+    }
+    .subheading_over_image {
+        font-size: 15px;
+    }
+    .search_floating_wrapper {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        padding: 0 15px;
+    }
+    .search_form_card {
+        transform: none;
+        border-radius: var(--unit-radius);
+    }
+    .search_tabs_on_image {
+        width: 100%;
+    }
+    .adv_search_tab_pill {
+        flex: 1;
+        text-align: center;
+    }
+    .adv_search_tab_pill a {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .adv_search_tab_pill:first-child a {
+        border-radius: var(--unit-radius) 0 0 0;
+    }
+    .adv_search_tab_pill:last-child a {
+        border-radius: 0 var(--unit-radius) 0 0;
+    }
+    .col-md-3,
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .properties-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .adv_search_tab .nav-tabs {
+        padding: 0 15px;
+    }
+    .adv_search_tab_item a {
+        padding: 14px 16px 11px;
+        font-size: 14px;
+    }
+    .tab-content {
+        padding: 15px;
+    }
+    .wpresidence_button {
+        width: 100%;
+    }
+    .places_square_backgorund_image {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading_over_image {
+        font-size: 24px;
+    }
+    .places_square_backgorund_image {
+        min-height: 170px;
+    }
+    .featured_property_card {
+        flex-direction: column !important;
+    }
+    .featured_property_image,
+    .featured_property_content {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .schedule_meeting_wrapper {
+        flex-direction: column !important;
+    }
+    .schedule_form_row {
+        flex-direction: column !important;
+    }
+    .testimonials_grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Additional WPResidence Sections
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Listing Wrapper Spacing ───────────────────────────────── */
+.listing_wrapper {
+    margin-bottom: 25px;
+}
+
+/* ── Featured Property Card (Large Side-by-Side) ───────────── */
+.wpresidence_featured_properties_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.featured_property_card {
+    display: flex;
+    background: var(--unit-bg);
+    border: var(--unit-border-size) solid var(--unit-border);
+    border-radius: var(--unit-radius);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.featured_property_card:hover {
+    box-shadow: 0 8px 30px rgba(0, 110, 225, 0.12);
+}
+
+.featured_property_card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.featured_property_image {
+    flex: 0 0 55%;
+    max-width: 55%;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+}
+
+.featured_property_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.7s ease;
+}
+
+.featured_property_card:hover .featured_property_image img {
+    transform: scale(1.05);
+}
+
+.featured_property_image .featured_gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4), transparent);
+    z-index: 1;
+}
+
+.featured_property_image .tag-wrapper {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 5;
+    display: flex;
+    gap: 6px;
+}
+
+.featured_property_content {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured_property_content h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.featured_property_content h3 a {
+    color: var(--color-heading);
+}
+
+.featured_property_content h3 a:hover {
+    color: var(--color-primary);
+}
+
+.featured_property_content .listing_details {
+    margin-bottom: 20px;
+}
+
+.featured_property_content .property_listing_details {
+    border-top: none;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+/* ── Testimonials Grid (3x2) ───────────────────────────────── */
+.testimonials_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonials_grid .testimonial-container {
+    margin-bottom: 0;
+}
+
+.testimonials_grid .testimonial-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    margin-right: 12px;
+}
+
+/* ── Schedule Meeting / Contact CTA Section ────────────────── */
+.schedule_meeting_wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.schedule_meeting_content {
+    flex: 1;
+}
+
+.schedule_meeting_content h2 {
+    font-size: var(--h2-size);
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.schedule_meeting_subtitle {
+    font-size: 16px;
+    color: var(--color-body);
+    margin-bottom: 10px;
+    line-height: 1.65;
+}
+
+.schedule_meeting_desc {
+    font-size: 14px;
+    color: var(--color-gray-500);
+    margin-bottom: 25px;
+    line-height: 1.65;
+}
+
+.schedule_meeting_features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.schedule_feature_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-heading);
+}
+
+.schedule_feature_item i {
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+/* ── Schedule Meeting Form ─────────────────────────────────── */
+.schedule_meeting_form {
+    flex: 0 0 420px;
+    max-width: 420px;
+    background: var(--unit-bg);
+    border: var(--unit-border-size) solid var(--unit-border);
+    border-radius: var(--unit-radius);
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.schedule_meeting_form h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.schedule_form_row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.schedule_form_row .form-control {
+    flex: 1;
+}
+
+.schedule_meeting_form textarea.form-control {
+    height: auto;
+    min-height: 100px;
+    resize: vertical;
+    margin-bottom: 0;
+    background-image: none;
+}
+
+.schedule_meeting_form .form-control {
+    background-color: #f8f8f8;
+    border-color: #eee;
+}
+
+.schedule_meeting_form .form-control:focus {
+    background-color: #fff;
+    border-color: var(--color-primary);
+}
+
+/* ── Section Spacing / Background Overrides ────────────────── */
+.wpresidence_section {
+    position: relative;
+}
+
+.wpresidence_section .section-header {
+    margin-bottom: 40px;
+}
+
+.wpresidence_section .section-title {
+    font-size: var(--h2-size);
+    font-weight: 500;
+}
+
+/* ── col-md-4 for property grid ────────────────────────────── */
+.col-md-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding-right: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+
+/* ── Responsive for New Sections ───────────────────────────── */
+@media (max-width: 1024px) {
+    .featured_property_card {
+        flex-direction: column !important;
+    }
+    .featured_property_image,
+    .featured_property_content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .featured_property_image {
+        min-height: 280px;
+    }
+    .schedule_meeting_wrapper {
+        flex-direction: column;
+    }
+    .schedule_meeting_form {
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    .testimonials_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials_grid {
+        grid-template-columns: 1fr;
+    }
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .schedule_form_row {
+        flex-direction: column;
+    }
+    .schedule_meeting_features {
+        grid-template-columns: 1fr;
+    }
 }

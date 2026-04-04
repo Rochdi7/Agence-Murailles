@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme constants
-define( 'AM_THEME_VERSION', '1.0.0' );
+define( 'AM_THEME_VERSION', '2.3.1' );
 define( 'AM_THEME_DIR', get_template_directory() );
 define( 'AM_THEME_URI', get_template_directory_uri() );
 
